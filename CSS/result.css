@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+:root {
+    --whaite-color: #fff;
+    --black-color: #000;
+    --gray-color: #888;
+}
+.box {
+    width: 100%;
+    background-color: #f6f6f8;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+}
+.box .header {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header span {
+    font-size: 22px;
+    font-weight: bold;
+}
+.header span:last-child {
+    width: 50px;
+    height: 50px;
+}
+.point {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+.point h3 {
+    font-size: 60px;
+}
+.info {
+    background-color: #fff;
+    padding: 10px;
+    font-weight: bold;
+}
