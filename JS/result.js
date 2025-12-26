@@ -7,28 +7,27 @@ function fallDataInHTML(array) {
         let box = document.createElement("div");
         box.className = "box";
         box.innerHTML = `
-            <div class="header">
-                <span>${item.country}</span>
-                <span class="${item.flag}"></span>
+            <div class="country">
+                <p><span class="${item.flag}"></span> ${item.country}</p>
             </div>
-            <div class="point">
-                <h3>${item.points}</h3>
+            <div class="pointInfo">
+                <p>نقاطك:</p>
+                <p>${item.minimum_points}</p>
+                <p>/</p>
+                <p class="yourPoint">${item.points}</p>
             </div>
             <div class="info">
-                <p>نظام الهجرة: ${item.system}</p>
-                <p>الحد الأدنى للنقاط: ${item.minimum_points}</p>
+                <p>نوع النظام: ${item.system}</p>
             </div>
-            `;
-        
-        let pointEl = box.querySelector("h3");
-
+        `;
+        let pointEl = box.querySelector(".yourPoint");
         if (item.points < item.minimum_points) {
+            pointEl.style.backgroundColor = "#ffaaaa";
             pointEl.style.color = "#ff2525";
         } else {
+            pointEl.style.backgroundColor = "#b1efb4";
             pointEl.style.color = "#4caf50";
         }
-
-        
         content.appendChild(box);
     });
 }
