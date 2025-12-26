@@ -2,16 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-family: "Tajawal", sans-serif;
 }
 :root {
     --whaite-color: #fff;
-    --black-color: #000;
+    --black-color: #333;
     --gray-color: #888;
 }
 a {
     text-decoration: none;
     color: var(--whaite-color);
+}
+.container div p:first-child {
+    font-size: 22px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: var(--black-color);
+}
+.container div p:nth-child(2) {
+    color: var(--gray-color);
 }
 button {
     width: 100%;
@@ -22,4 +31,25 @@ button {
     color: var(--whaite-color);
     cursor: pointer;
     margin-top: 20px;
+}
+.container:first-child {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.image {
+    width: 200px;
+    margin-top: 20px;
+}
+.image img {
+    width: 100%;
+}
+h3 {
+    font-weight: bold;
+}
+.container div:not(:last-child) {
+    margin-bottom: 30px !important;
 }
